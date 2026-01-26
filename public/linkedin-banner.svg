@@ -1,0 +1,138 @@
+<svg viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    
+    <linearGradient id="bannerAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+    
+    <!-- Animated gradient blobs -->
+    <radialGradient id="blob1">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="blob2">
+      <stop offset="0%" stop-color="#1D4ED8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="blob3">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1584" height="396" fill="url(#bannerBg)" />
+  
+  <!-- Decorative blobs - subtle -->
+  <circle cx="200" cy="100" r="180" fill="url(#blob1)" />
+  <circle cx="1400" cy="280" r="200" fill="url(#blob2)" />
+  <circle cx="800" cy="60" r="120" fill="url(#blob3)" />
+  
+  <!-- Clean geometric accents -->
+  <g opacity="0.06">
+    <circle cx="80" cy="80" r="50" fill="#6366F1" />
+    <circle cx="1500" cy="320" r="60" fill="#8B5CF6" />
+  </g>
+  
+  <!-- Feature Cards - Right Side Only -->
+  <g transform="translate(800, 50)">
+    <!-- Card 1: AI-Guided Platform -->
+    <g>
+      <rect x="0" y="0" width="300" height="55" rx="10" fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+      <!-- AI Sparkle Icon -->
+      <g transform="translate(18, 22)">
+        <path d="M 6 0 L 7 4 L 11 5 L 7 6 L 6 10 L 5 6 L 1 5 L 5 4 Z" fill="url(#aiGlow)" />
+        <circle cx="2" cy="2" r="1" fill="url(#aiGlow)" opacity="0.6" />
+        <circle cx="10" cy="9" r="0.8" fill="url(#aiGlow)" opacity="0.6" />
+      </g>
+      <text x="50" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1e293b">
+        AI-Guided Platform
+      </text>
+    </g>
+    
+    <!-- Card 2: Enterprise-Grade HRIS -->
+    <g transform="translate(0, 65)">
+      <rect x="0" y="0" width="300" height="55" rx="10" fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+      <!-- Building Icon -->
+      <g transform="translate(18, 22)">
+        <rect x="2" y="2" width="8" height="10" fill="url(#bannerAccent)" rx="1" />
+        <rect x="4" y="4" width="1.5" height="1.5" fill="#ffffff" />
+        <rect x="7" y="4" width="1.5" height="1.5" fill="#ffffff" />
+        <rect x="4" y="7" width="1.5" height="1.5" fill="#ffffff" />
+        <rect x="7" y="7" width="1.5" height="1.5" fill="#ffffff" />
+      </g>
+      <text x="50" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1e293b">
+        Enterprise-Grade HRIS
+      </text>
+    </g>
+    
+    <!-- Card 3: 24/7 Expert Support -->
+    <g transform="translate(0, 130)">
+      <rect x="0" y="0" width="300" height="55" rx="10" fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+      <!-- Headset Icon -->
+      <g transform="translate(18, 22)">
+        <path d="M 3 6 Q 3 3 6 3 Q 9 3 9 6 L 9 8 L 8 8 L 8 6 Q 8 4 6 4 Q 4 4 4 6 L 4 8 L 3 8 Z" fill="#10b981" />
+        <rect x="2.5" y="7" width="2" height="3" rx="0.5" fill="#10b981" />
+        <rect x="7.5" y="7" width="2" height="3" rx="0.5" fill="#10b981" />
+      </g>
+      <text x="50" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1e293b">
+        24/7 Expert Support
+      </text>
+    </g>
+    
+    <!-- Card 4: Core HR -->
+    <g transform="translate(320, 0)">
+      <rect x="0" y="0" width="300" height="55" rx="10" fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+      <!-- Users Icon -->
+      <g transform="translate(18, 22)">
+        <circle cx="4" cy="4" r="2" fill="#f59e0b" />
+        <path d="M 1 11 Q 1 8 4 8 Q 7 8 7 11" fill="#f59e0b" />
+        <circle cx="9" cy="5" r="1.5" fill="#f59e0b" opacity="0.7" />
+        <path d="M 7 11 Q 7 9 9 9 Q 11 9 11 11" fill="#f59e0b" opacity="0.7" />
+      </g>
+      <text x="50" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1e293b">
+        Core HR
+      </text>
+    </g>
+    
+    <!-- Card 5: Time and Attendance -->
+    <g transform="translate(320, 65)">
+      <rect x="0" y="0" width="300" height="55" rx="10" fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+      <!-- Clock Icon -->
+      <g transform="translate(18, 22)">
+        <circle cx="6" cy="6" r="5" fill="none" stroke="#3b82f6" stroke-width="1.5" />
+        <path d="M 6 3 L 6 6 L 8 8" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      </g>
+      <text x="50" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1e293b">
+        Time and Attendance
+      </text>
+    </g>
+    
+    <!-- Card 6: Analytics & Reporting -->
+    <g transform="translate(320, 130)">
+      <rect x="0" y="0" width="300" height="55" rx="10" fill="#ffffff" opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+      <!-- Chart Icon -->
+      <g transform="translate(18, 22)">
+        <rect x="2" y="8" width="2" height="4" fill="#8b5cf6" rx="0.5" />
+        <rect x="5" y="5" width="2" height="7" fill="#8b5cf6" rx="0.5" />
+        <rect x="8" y="3" width="2" height="9" fill="#8b5cf6" rx="0.5" />
+      </g>
+      <text x="50" y="33" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#1e293b">
+        Analytics &amp; Reporting
+      </text>
+    </g>
+  </g>
+</svg>
