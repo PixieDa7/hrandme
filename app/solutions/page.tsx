@@ -1,13 +1,7 @@
-import type { Metadata } from 'next'
+'use client'
 import Link from 'next/link'
 import { Check, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-
-export const metadata: Metadata = {
-  title: 'Solutions - HRandME | HR Solutions for Every Team',
-  description: 'Discover HRandME solutions that fit your organization. From Basic HR to Enterprise packages, we have the right solution for your needs.',
-  keywords: 'HRIS solutions, HR software packages, HR system solutions, employee management solutions',
-}
 
 const solutionTiers = [
   {
