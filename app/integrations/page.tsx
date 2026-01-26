@@ -54,7 +54,7 @@ export default function IntegrationsPage() {
       <section className="py-20 lg:py-32 bg-gradient-to-br from-neutral-50 via-white to-blue-50 relative overflow-hidden">
         <div className="container-custom relative z-10">
           {/* Floating Integration Logos */}
-          <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 pointer-events-none hidden lg:block">
             {/* Top Left */}
             <motion.div
               className="absolute top-16 left-[8%]"

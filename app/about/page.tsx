@@ -133,7 +133,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-              <div>
+              <div className="hidden md:block">
                 <h2 className="text-3xl font-bold text-neutral-900 mb-6">Our Story</h2>
                 <p className="text-neutral-600 mb-4 leading-relaxed">
                   HRandME was born from a simple observation: most HRIS platforms are built by engineers for engineers, not by HR professionals for HR professionals. And none were truly built with Canadian businesses in mind.

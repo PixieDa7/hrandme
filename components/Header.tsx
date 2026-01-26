@@ -169,18 +169,18 @@ export default function Header() {
             </Link>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             <Link
               href="/contact"
-              className="px-6 py-2.5 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+              className="px-4 py-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors text-sm"
             >
               Talk to an Expert
             </Link>
             <Link
               href="/contact?type=demo"
-              className="px-6 py-2.5 gradient-primary text-white rounded-lg hover:shadow-lg transition-all font-semibold"
+              className="px-5 py-2 gradient-primary text-white rounded-lg hover:shadow-lg transition-all font-semibold text-sm"
             >
-              Try Demo
+              Book a Demo
             </Link>
           </div>
 
@@ -268,7 +268,7 @@ export default function Header() {
                   className="block w-full px-6 py-2.5 text-center gradient-primary text-white rounded-lg font-semibold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Try Demo
+                  Book a Demo
                 </Link>
               </div>
             </div>
