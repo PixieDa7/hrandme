@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Check, ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export const metadata: Metadata = {
   title: 'Solutions - HRandME | HR Solutions for Every Team',
@@ -66,8 +67,48 @@ const solutionTiers = [
 export default function SolutionsPage() {
   return (
     <div className="pt-20">
-      <section className="py-8 lg:py-12 bg-gradient-to-br from-neutral-50 via-white to-primary-50">
-        <div className="container-custom">
+      <section className="relative py-8 lg:py-12 bg-gradient-to-br from-neutral-50 via-white to-primary-50 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden hidden lg:block">
+          <motion.div
+            className="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, 50, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-10 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
+              x: [0, -100, 0],
+              y: [0, 100, 0],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute -bottom-20 left-1/3 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
+              x: [0, 50, 0],
+              y: [0, -50, 0],
+            }}
+            transition={{
+              duration: 22,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full mb-4 mt-4 lg:mt-6">
               <span className="text-sm font-semibold">Recommended Packages</span>
@@ -75,11 +116,8 @@ export default function SolutionsPage() {
             <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
               Solutions designed to scale with you
             </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-4">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
               Choose from our recommended HR solutions designed to fit your organization's needs. Contact us for pricing details.
-            </p>
-            <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
-              Start with Basic HR for essential employee management, upgrade to Core HR for advanced features, or customize your package with add-on modules like Recruitment, Performance Management, and Compensation. Every component is optional—pay only for what you use.
             </p>
           </div>
 
