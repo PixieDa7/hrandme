@@ -108,11 +108,6 @@ export default function SolutionsPage() {
                   <p className={`text-sm mb-6 ${tier.popular ? 'text-white/90' : 'text-neutral-600'}`}>
                     {tier.description}
                   </p>
-                  <div className="flex items-baseline">
-                    <span className={`text-4xl font-bold ${tier.popular ? 'text-white' : 'text-neutral-900'}`}>
-                      {tier.price}
-                    </span>
-                  </div>
                 </div>
 
                 <ul className="space-y-4 mb-8">
