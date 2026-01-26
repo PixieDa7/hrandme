@@ -4,8 +4,8 @@ interface LogoProps {
 }
 
 export default function Logo({ className = '', variant = 'default' }: LogoProps) {
-  const primaryColor = variant === 'white' ? '#FFFFFF' : '#0F172A'
   const accentColor = '#2563EB' // Professional blue
+  const gradientId = `logo-gradient-${variant}`
   
   return (
     <svg 
@@ -13,6 +13,24 @@ export default function Logo({ className = '', variant = 'default' }: LogoProps)
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
+      {/* Gradient definition */}
+      <defs>
+        <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+          {variant === 'white' ? (
+            <>
+              <stop offset="0%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#FFFFFF', stopOpacity: 1 }} />
+            </>
+          ) : (
+            <>
+              <stop offset="0%" style={{ stopColor: '#4F46E5', stopOpacity: 1 }} />
+              <stop offset="50%" style={{ stopColor: '#9333EA', stopOpacity: 1 }} />
+              <stop offset="100%" style={{ stopColor: '#14B8A6', stopOpacity: 1 }} />
+            </>
+          )}
+        </linearGradient>
+      </defs>
+      
       {/* Simple icon - Three people in a clean arrangement */}
       <g transform="translate(0, 4)">
         {/* Center person - larger */}
@@ -34,7 +52,7 @@ export default function Logo({ className = '', variant = 'default' }: LogoProps)
         </g>
       </g>
       
-      {/* Text - HRandMe with proper spacing */}
+      {/* Text - HRandMe with gradient */}
       <text
         x="50"
         y="30"
@@ -44,7 +62,7 @@ export default function Logo({ className = '', variant = 'default' }: LogoProps)
           fontWeight: '700',
           letterSpacing: '0.01em'
         }}
-        fill={primaryColor}
+        fill={`url(#${gradientId})`}
       >
         HRandMe
       </text>

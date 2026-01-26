@@ -108,7 +108,7 @@ export default function CoreHRPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-indigo-50 to-white overflow-hidden">
+      <section className="relative py-20 lg:py-24 bg-gradient-to-br from-indigo-50 to-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -202,7 +202,7 @@ export default function CoreHRPage() {
 
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full mb-6 mt-8 lg:mt-0">
+            <div className="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full mb-6 mt-8 lg:mt-12">
               <Building2 className="w-4 h-4" />
               <span className="text-sm font-semibold">Core HR Platform</span>
             </div>
@@ -221,7 +221,7 @@ export default function CoreHRPage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pricing"
+                href="/solutions"
                 className="px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold text-lg"
               >
                 View Pricing
@@ -232,7 +232,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
@@ -265,7 +265,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* Core HR Modules Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-indigo-50 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-indigo-50 to-white">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
@@ -395,7 +395,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* Image Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -444,7 +444,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* Mobile App Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -531,7 +531,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-16 lg:py-20 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -576,7 +576,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
@@ -606,7 +606,7 @@ export default function CoreHRPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-neutral-800 to-neutral-900">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-neutral-800 to-neutral-900">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">

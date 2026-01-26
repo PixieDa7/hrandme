@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { ArrowRight, CheckCircle, Link2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const integrationCategories = [
@@ -51,7 +51,7 @@ const integrationCategories = [
 export default function IntegrationsPage() {
   return (
     <div className="pt-20">
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-neutral-50 via-white to-blue-50 relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-gradient-to-br from-neutral-50 via-white to-blue-50 relative overflow-hidden">
         <div className="container-custom relative z-10">
           {/* Floating Integration Logos */}
           <div className="absolute inset-0 pointer-events-none hidden lg:block">
@@ -221,7 +221,17 @@ export default function IntegrationsPage() {
           </div>
 
           {/* Center Content */}
-          <div className="max-w-4xl mx-auto text-center relative z-20 py-16">
+          <div className="max-w-4xl mx-auto text-center relative z-20">
+            <motion.div
+              className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-6 py-3 rounded-full mb-6 mt-4 lg:mt-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Link2 className="w-5 h-5" />
+              <span className="text-sm font-semibold">500+ Integrations</span>
+            </motion.div>
             <motion.h1 
               className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6"
               initial={{ opacity: 0, y: 20 }}

@@ -47,7 +47,7 @@ export default function AnalyticsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+      <section className="relative py-20 lg:py-24 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -147,7 +147,7 @@ export default function AnalyticsPage() {
 
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6 mt-8 lg:mt-0">
+            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6 mt-8 lg:mt-12">
               <BarChart3 className="w-4 h-4" />
               <span className="text-sm font-semibold">Analytics & Reporting</span>
             </div>
@@ -166,7 +166,7 @@ export default function AnalyticsPage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pricing"
+                href="/solutions"
                 className="px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold text-lg"
               >
                 View Pricing
@@ -176,7 +176,7 @@ export default function AnalyticsPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28">
+      <section className="py-16 lg:py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
@@ -209,7 +209,7 @@ export default function AnalyticsPage() {
       </section>
 
       {/* Image Section */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-slate-50 to-white">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -263,7 +263,7 @@ export default function AnalyticsPage() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-neutral-800 to-neutral-900">
+      <section className="py-16 lg:py-20 bg-gradient-to-br from-neutral-800 to-neutral-900">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">

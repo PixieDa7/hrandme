@@ -147,11 +147,11 @@ export default function Header() {
               Integrations
             </Link>
             <Link
-              href="/pricing"
+              href="/solutions"
               className="text-neutral-700 hover:text-primary-600 transition-colors font-medium"
               onClick={() => setIsProductOpen(false)}
             >
-              Pricing
+              Solutions
             </Link>
             <Link
               href="/about"
@@ -235,11 +235,11 @@ export default function Header() {
                 Integrations
               </Link>
               <Link
-                href="/pricing"
+                href="/solutions"
                 className="px-4 py-2 text-neutral-700 hover:text-primary-600 transition-colors font-medium"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Pricing
+                Solutions
               </Link>
               <Link
                 href="/about"

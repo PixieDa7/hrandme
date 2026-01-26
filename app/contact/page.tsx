@@ -1,210 +1,120 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect } from 'react'
 import type { Metadata } from 'next'
-import { Mail, Phone, MapPin, Send, Sparkles } from 'lucide-react'
+import { Mail, Phone, MapPin, Sparkles, MessageSquare } from 'lucide-react'
+import { motion } from 'framer-motion'
+
+declare global {
+  interface Window {
+    jotformEmbedHandler: (selector: string, url: string) => void
+  }
+}
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    employees: '',
-    plan: '',
-    message: '',
-  })
+  useEffect(() => {
+    // Load JotForm embed handler script
+    const script = document.createElement('script')
+    script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'
+    script.async = true
+    document.body.appendChild(script)
 
-  const [submitted, setSubmitted] = useState(false)
+    script.onload = () => {
+      if (window.jotformEmbedHandler) {
+        window.jotformEmbedHandler("iframe[id='JotFormIFrame-260255498238061']", "https://form.jotform.com/")
+      }
+    }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 5000)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
 
   return (
     <div className="pt-20">
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-neutral-50 via-white to-primary-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
+      <section className="relative py-8 lg:py-12 bg-gradient-to-br from-neutral-50 via-white to-primary-50 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden hidden lg:block">
+          <motion.div
+            className="absolute top-20 left-10 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, 50, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute top-40 right-10 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
+              x: [0, -100, 0],
+              y: [0, 100, 0],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          <motion.div
+            className="absolute -bottom-20 left-1/3 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+            animate={{
+              x: [0, 50, 0],
+              y: [0, -50, 0],
+            }}
+            transition={{
+              duration: 22,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </div>
+
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-8 lg:mb-8">
+            <motion.div
+              className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-6 py-3 rounded-full mb-6 mt-4 lg:mt-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <MessageSquare className="w-5 h-5" />
+              <span className="text-sm font-semibold">Try Demo</span>
+            </motion.div>
+            <motion.h1 
+              className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               Let's talk about your HR needs
-            </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-neutral-600 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               Get in touch with our team to learn how HRandME can transform your HR operations
-            </p>
+            </motion.p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-                <h2 className="text-3xl font-bold text-neutral-900 mb-8">
-                  Try Demo or Get in Touch
-                </h2>
-                
-                {submitted && (
-                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-800 font-semibold">
-                      Thank you! We'll be in touch shortly.
-                    </p>
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-semibold text-neutral-700 mb-2">
-                        First Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        required
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-semibold text-neutral-700 mb-2">
-                        Last Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        required
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-neutral-700 mb-2">
-                      Work Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-semibold text-neutral-700 mb-2">
-                        Company Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        required
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-neutral-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="employees" className="block text-sm font-semibold text-neutral-700 mb-2">
-                        Number of Employees *
-                      </label>
-                      <select
-                        id="employees"
-                        name="employees"
-                        required
-                        value={formData.employees}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                      >
-                        <option value="">Select range</option>
-                        <option value="1-50">1-50</option>
-                        <option value="51-100">51-100</option>
-                        <option value="101-250">101-250</option>
-                        <option value="251-500">251-500</option>
-                        <option value="500+">500+</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="plan" className="block text-sm font-semibold text-neutral-700 mb-2">
-                        Interested In
-                      </label>
-                      <select
-                        id="plan"
-                        name="plan"
-                        value={formData.plan}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors"
-                      >
-                        <option value="">Select option</option>
-                        <option value="demo">Try Demo</option>
-                        <option value="starter">Starter Plan</option>
-                        <option value="professional">Professional Plan</option>
-                        <option value="enterprise">Enterprise Plan</option>
-                        <option value="general">General Inquiry</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-neutral-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your HR needs..."
-                      className="w-full px-4 py-3 border-2 border-neutral-200 rounded-lg focus:border-primary-500 focus:outline-none transition-colors resize-none"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full gradient-primary text-white py-4 px-8 rounded-lg font-semibold hover:shadow-xl transition-all flex items-center justify-center space-x-2 group"
-                  >
-                    <span>Send Message</span>
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-
-                  <p className="text-sm text-neutral-500 text-center">
-                    By submitting this form, you agree to our privacy policy and terms of service.
-                  </p>
-                </form>
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <iframe
+                  id="JotFormIFrame-260255498238061"
+                  title="Try Demo or Get in Touch"
+                  onLoad={() => window.parent.scrollTo(0,0)}
+                  allowTransparency={true}
+                  allow="geolocation; microphone; camera; fullscreen; payment"
+                  src="https://form.jotform.com/260255498238061"
+                  style={{ minWidth: '100%', maxWidth: '100%', height: '539px', border: 'none' }}
+                  scrolling="no"
+                />
               </div>
             </div>
 

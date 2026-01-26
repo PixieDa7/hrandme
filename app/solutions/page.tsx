@@ -3,48 +3,50 @@ import Link from 'next/link'
 import { Check, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Pricing - HRandME | Flexible Plans for Every Team',
-  description: 'Choose the HRandME plan that fits your organization. From startups to enterprises, we have flexible pricing to match your needs.',
-  keywords: 'HRIS pricing, HR software cost, HR system pricing, employee management pricing',
+  title: 'Solutions - HRandME | HR Solutions for Every Team',
+  description: 'Discover HRandME solutions that fit your organization. From Basic HR to Enterprise packages, we have the right solution for your needs.',
+  keywords: 'HRIS solutions, HR software packages, HR system solutions, employee management solutions',
 }
 
-const pricingTiers = [
+const solutionTiers = [
   {
     name: 'Basic HR',
     description: 'Essential HR foundation',
-    price: 'Custom',
+    price: 'Contact Us',
+    priceUnit: 'for pricing details',
     features: [
       'Employee Record Management',
-      'Time & Attendance Tracking',
+      'Leave & PTO Management',
       'Payroll Integration',
       'Employee Self-Service Portal',
       'Document Storage',
-      'Email Support',
+      '24/7 Support',
     ],
-    cta: 'Get Started',
+    cta: 'Contact Us',
     popular: false,
   },
   {
     name: 'Core HR',
     description: 'Complete HR platform',
-    price: 'Custom',
+    price: 'Contact Us',
+    priceUnit: 'for pricing details',
     features: [
       'Everything in Basic HR',
-      'Leave Management',
+      'Time & Attendance',
       'AI Intelligence & Insights',
       'Analytics & Reporting',
       'Advanced Workflows',
-      'Mobile App Access',
+      'Mobile App',
       '24/7 Support',
-      'Modular: Select only what you need',
     ],
-    cta: 'Get Started',
+    cta: 'Contact Us',
     popular: true,
   },
   {
-    name: 'Enterprise',
-    description: 'Full-suite solution',
-    price: 'Custom',
+    name: 'Enterprise/Modular',
+    description: 'Pay Only for What You Use',
+    price: 'Contact Us',
+    priceUnit: 'for custom pricing',
     features: [
       'Everything in Core HR',
       'Recruitment Module (optional)',
@@ -61,20 +63,20 @@ const pricingTiers = [
   },
 ]
 
-export default function PricingPage() {
+export default function SolutionsPage() {
   return (
     <div className="pt-20">
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-neutral-50 via-white to-primary-50">
+      <section className="py-8 lg:py-12 bg-gradient-to-br from-neutral-50 via-white to-primary-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full mb-4">
-              <span className="text-sm font-semibold">Only Pay for What You Use</span>
+            <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full mb-4 mt-4 lg:mt-6">
+              <span className="text-sm font-semibold">Recommended Packages</span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
-              Pricing designed to scale with you
+              Solutions designed to scale with you
             </h1>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-4">
-              Modular, flexible pricing designed to scale with your organization. Build your perfect HR solution.
+              Choose from our recommended HR solutions designed to fit your organization's needs. Contact us for pricing details.
             </p>
             <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
               Start with Basic HR for essential employee management, upgrade to Core HR for advanced features, or customize your package with add-on modules like Recruitment, Performance Management, and Compensation. Every component is optional—pay only for what you use.
@@ -82,7 +84,7 @@ export default function PricingPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {solutionTiers.map((tier, index) => (
               <div
                 key={index}
                 className={`relative rounded-2xl p-8 ${
@@ -111,9 +113,6 @@ export default function PricingPage() {
                       {tier.price}
                     </span>
                   </div>
-                  <p className={`text-sm mt-2 ${tier.popular ? 'text-white/80' : 'text-neutral-500'}`}>
-                    Contact us for pricing details
-                  </p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -128,7 +127,7 @@ export default function PricingPage() {
                 </ul>
 
                 <Link
-                  href={`/contact?plan=${tier.name.toLowerCase()}`}
+                  href={`/contact?solution=${tier.name.toLowerCase()}`}
                   className={`block w-full py-3 px-6 rounded-lg font-semibold text-center transition-all ${
                     tier.popular
                       ? 'bg-white text-primary-600 hover:bg-neutral-100'
@@ -143,7 +142,7 @@ export default function PricingPage() {
 
           <div className="mt-16 text-center">
             <p className="text-neutral-600 mb-4">
-              All plans include free implementation, ongoing system updates, and flexible month-to-month contracts
+              All plans include free implementation and ongoing system updates
             </p>
             <Link
               href="/contact"

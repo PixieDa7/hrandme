@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 export default function AboutPage() {
   return (
     <div className="pt-20">
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-teal-50 via-white to-emerald-50 relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-gradient-to-br from-teal-50 via-white to-emerald-50 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-teal-300 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-emerald-300 rounded-full blur-3xl"></div>
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <motion.div
-              className="inline-flex items-center space-x-2 bg-red-100 text-red-700 px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center space-x-2 bg-red-100 text-red-700 px-4 py-2 rounded-full mb-6 mt-4 lg:mt-6"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
             >
