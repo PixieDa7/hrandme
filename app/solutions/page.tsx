@@ -105,7 +105,7 @@ export default function SolutionsPage() {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full mb-4 mt-4 lg:mt-6">
-              <span className="text-sm font-semibold">Recommended Packages</span>
+              <span className="text-sm font-semibold">Solutions for SMEs</span>
             </div>
             <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6">
               Solutions designed to scale with you
