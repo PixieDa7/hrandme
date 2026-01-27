@@ -171,6 +171,12 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center space-x-3">
             <Link
+              href="/login"
+              className="px-4 py-2 text-neutral-700 hover:text-primary-600 font-semibold transition-colors text-sm"
+            >
+              Log In
+            </Link>
+            <Link
               href="/contact"
               className="px-4 py-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors text-sm"
             >
