@@ -174,15 +174,23 @@ export default function Chatbot() {
   }
 
   const containsProfanity = (text: string): boolean => {
-    const profanityList = [
+    const inappropriateWords = [
+      // Profanity
       'fuck', 'shit', 'damn', 'ass', 'bitch', 'bastard', 'crap', 
-      'piss', 'dick', 'cock', 'pussy', 'asshole', 'hell', 'whore'
+      'piss', 'dick', 'cock', 'pussy', 'asshole', 'hell', 'whore',
+      // Sexual terms
+      'penis', 'vagina', 'sex', 'sexual', 'porn', 'nude', 'naked',
+      'breast', 'boob', 'tit', 'genital', 'erotic', 'horny', 'masturbat',
+      // Violent/harassment terms
+      'kill', 'murder', 'rape', 'assault', 'attack', 'hurt', 'harm',
+      'abuse', 'harass', 'threat', 'violence', 'die', 'death', 'stab',
+      'shoot', 'gun', 'weapon', 'bomb', 'terrorist', 'hate'
     ]
     
     const lowerText = text.toLowerCase()
-    return profanityList.some(word => {
+    return inappropriateWords.some(word => {
       // Use word boundaries to match whole words only
-      const regex = new RegExp(`\\b${word}\\b`, 'i')
+      const regex = new RegExp(`\\b${word}`, 'i')
       return regex.test(lowerText)
     })
   }
@@ -322,9 +330,9 @@ export default function Chatbot() {
     setTimeout(() => {
       let responseText: string
       
-      // Check for profanity first (applies to all stages)
+      // Check for inappropriate content first (applies to all stages)
       if (containsProfanity(textToSend)) {
-        responseText = `I appreciate your interest, but let's keep our conversation professional. I'm here to help you learn about HRandME. What would you like to know?`
+        responseText = `I'm here to provide professional assistance with HRandME's HR solutions. Please keep the conversation appropriate and focused on how we can help your business. If you have questions about our services, I'm happy to help.`
         
         // If onboarding not complete, keep them in current step
         // If complete, show prompts
