@@ -111,7 +111,7 @@ export default function SolutionsPage() {
               Solutions designed to scale with you
             </h1>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Choose from our recommended HR solutions designed to fit your organization's needs. Contact us for pricing details.
+              Big solutions for small teams. Enterprise-grade HR without the complexity.
             </p>
           </div>
 
