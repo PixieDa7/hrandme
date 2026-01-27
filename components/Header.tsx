@@ -53,10 +53,10 @@ export default function Header() {
               className="relative"
               onMouseEnter={() => setIsProductOpen(true)}
               onMouseLeave={() => setIsProductOpen(false)}
-              onClick={() => setIsProductOpen(false)}
             >
               <button
                 className="flex items-center space-x-1 text-neutral-700 hover:text-primary-600 transition-colors font-medium py-2"
+                onClick={() => setIsProductOpen(!isProductOpen)}
               >
                 <span>Product</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isProductOpen ? 'rotate-180' : ''}`} />
