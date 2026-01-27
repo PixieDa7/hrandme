@@ -85,7 +85,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex items-center gap-2 text-sm text-neutral-500 mb-8 lg:justify-start justify-center"
+              className="flex items-center gap-2 text-sm text-neutral-500 mb-5 lg:justify-start justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -95,7 +95,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4 mb-12"
+              className="flex flex-col sm:flex-row items-center lg:justify-start justify-center gap-4 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
