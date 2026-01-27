@@ -36,7 +36,7 @@ export default function AboutPage() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              HRandME was created by Canadian HR leaders who wanted a system that respected their expertise while removing unnecessary complexity from HR technology. We understand the unique needs of Canadian businesses.
+              HRandME was created by Canadian HR leaders who wanted a system that respected their expertise while removing unnecessary complexity from HR technology. Built AI-first, our platform guides you through every workflow, provides custom AI agents for your employees, and makes enterprise-grade HR accessible to small teams. We understand the unique needs of Canadian businesses.
             </motion.p>
           </div>
         </div>
@@ -94,9 +94,9 @@ export default function AboutPage() {
                 <div className="flex items-center mb-3">
                   <Zap className="w-12 h-12 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-3">Simple to Use</h3>
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">AI-Guided & Simple</h3>
                 <p className="text-neutral-600">
-                  Built to be simple to use and maintain for small to medium-sized companies—no technical expertise needed.
+                  AI guides you through every task and workflow, making enterprise HR simple for small teams—no technical expertise needed.
                 </p>
               </motion.div>
             </div>

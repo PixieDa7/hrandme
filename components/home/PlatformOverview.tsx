@@ -41,7 +41,7 @@ export default function PlatformOverview() {
                 <CheckCircle className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-neutral-900 mb-1">AI-Guided Intelligence</h4>
-                  <p className="text-neutral-600">Smart insights that enhance decision-making</p>
+                  <p className="text-neutral-600">AI guides workflows, provides employee support, and delivers smart insights for better decisions</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

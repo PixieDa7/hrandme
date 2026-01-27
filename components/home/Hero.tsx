@@ -81,7 +81,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              HRandME is an AI-guided HRIS for <strong>small</strong> HR teams—delivering enterprise-grade capability with clarity, control, and confidence.
+              HRandME is an AI-guided HRIS for <strong>small</strong> HR teams—delivering enterprise-grade capability with clarity, control, and confidence. Our AI guides you through every workflow, helps your employees with instant answers, and makes complex HR simple.
             </motion.p>
 
             <motion.div

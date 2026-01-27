@@ -10,8 +10,8 @@ const pillars = [
   },
   {
     icon: Sparkles,
-    title: 'AI That Guides Change',
-    description: 'AI supports HR by guiding system updates, explaining impact, and reducing risk.',
+    title: 'AI-Powered Everything',
+    description: 'AI guides you through workflows, provides instant employee support, explains system changes, and acts as a custom AI agent for your entire team.',
     gradient: 'from-purple-500 to-pink-500',
     bgGradient: 'from-purple-50 to-pink-50',
   },
