@@ -94,6 +94,8 @@ export default function Chatbot() {
   const [userPhone, setUserPhone] = useState<string>('')
   const [onboardingStep, setOnboardingStep] = useState<'name' | 'email' | 'phone' | 'complete'>('name')
   const [nameAttempts, setNameAttempts] = useState(0)
+  const [emailAttempts, setEmailAttempts] = useState(0)
+  const [phoneAttempts, setPhoneAttempts] = useState(0)
   const [currentPrompts, setCurrentPrompts] = useState<Array<{ label: string, query: string }>>([])
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
@@ -171,6 +173,16 @@ export default function Chatbot() {
     }
     
     return phone // Return original if not 10 digits
+  }
+
+  const isRefusal = (text: string): boolean => {
+    const refusalPhrases = [
+      "don't want", "dont want", "do not want", "won't give", "wont give",
+      "will not give", "refuse", "no thanks", "skip", "pass", "next"
+    ]
+    
+    const lowerText = text.toLowerCase()
+    return refusalPhrases.some(phrase => lowerText.includes(phrase))
   }
 
   const containsProfanity = (text: string): boolean => {
@@ -384,29 +396,10 @@ export default function Chatbot() {
         }
       }
       else if (onboardingStep === 'email') {
-        const detectedEmail = detectEmail(textToSend)
-        if (detectedEmail) {
-          setUserEmail(detectedEmail)
-          setOnboardingStep('phone')
-          responseText = `Great! And what's the best phone number to reach you at?`
-        } else {
-          responseText = `I didn't catch a valid email address. Could you please provide your email? (e.g., name@example.com)`
-        }
-      }
-      else if (onboardingStep === 'phone') {
-        const detectedPhone = detectPhone(textToSend)
-        if (detectedPhone) {
-          const formattedPhone = formatPhoneNumber(detectedPhone)
-          setUserPhone(formattedPhone)
+        // Check if user is refusing to provide email
+        if (isRefusal(textToSend) || emailAttempts >= 2) {
           setOnboardingStep('complete')
-          
-          // Send notification with all collected info
-          sendContactNotification('email', userEmail, userName)
-          sendContactNotification('phone', formattedPhone, userName)
-          
-          responseText = `Perfect! I've got your number as ${formattedPhone}. Thank you, ${userName}! 🙏 Our team will reach out to you shortly. Now, what would you like to learn about HRandME?`
-          
-          // Show topic prompts now that onboarding is complete
+          responseText = `No problem! Let's move forward. What would you like to learn about HRandME?`
           setCurrentPrompts([
             { label: 'Core HR', query: 'Tell me about Core HR' },
             { label: 'Performance', query: 'Tell me about Performance Management' },
@@ -416,7 +409,74 @@ export default function Chatbot() {
             { label: 'About Us', query: 'Tell me about HRandME' },
           ])
         } else {
-          responseText = `I didn't catch a valid 10-digit phone number. Please provide your phone number in any format (e.g., 9055912651 or 905-591-2651)`
+          const detectedEmail = detectEmail(textToSend)
+          if (detectedEmail) {
+            setUserEmail(detectedEmail)
+            setEmailAttempts(0)
+            setOnboardingStep('phone')
+            responseText = `Great! And what's the best phone number to reach you at?`
+          } else {
+            setEmailAttempts(prev => prev + 1)
+            if (emailAttempts >= 1) {
+              responseText = `I didn't catch a valid email address. Could you please provide your email? (e.g., name@example.com) Or type "skip" if you'd prefer not to share.`
+            } else {
+              responseText = `I didn't catch a valid email address. Could you please provide your email? (e.g., name@example.com)`
+            }
+          }
+        }
+      }
+      else if (onboardingStep === 'phone') {
+        // Check if user is refusing to provide phone
+        if (isRefusal(textToSend) || phoneAttempts >= 2) {
+          setOnboardingStep('complete')
+          
+          // Send notification with collected info (if we have email)
+          if (userEmail) {
+            sendContactNotification('email', userEmail, userName)
+          }
+          
+          responseText = `No problem! Let's get started. What would you like to learn about HRandME?`
+          setCurrentPrompts([
+            { label: 'Core HR', query: 'Tell me about Core HR' },
+            { label: 'Performance', query: 'Tell me about Performance Management' },
+            { label: 'Recruitment', query: 'Tell me about Recruitment' },
+            { label: 'Compensation', query: 'Tell me about Compensation' },
+            { label: 'Pricing', query: 'What are your prices?' },
+            { label: 'About Us', query: 'Tell me about HRandME' },
+          ])
+        } else {
+          const detectedPhone = detectPhone(textToSend)
+          if (detectedPhone) {
+            const formattedPhone = formatPhoneNumber(detectedPhone)
+            setUserPhone(formattedPhone)
+            setPhoneAttempts(0)
+            setOnboardingStep('complete')
+            
+            // Send notification with all collected info
+            if (userEmail) {
+              sendContactNotification('email', userEmail, userName)
+            }
+            sendContactNotification('phone', formattedPhone, userName)
+            
+            responseText = `Perfect! I've got your number as ${formattedPhone}. Thank you, ${userName}! 🙏 Our team will reach out to you shortly. Now, what would you like to learn about HRandME?`
+            
+            // Show topic prompts now that onboarding is complete
+            setCurrentPrompts([
+              { label: 'Core HR', query: 'Tell me about Core HR' },
+              { label: 'Performance', query: 'Tell me about Performance Management' },
+              { label: 'Recruitment', query: 'Tell me about Recruitment' },
+              { label: 'Compensation', query: 'Tell me about Compensation' },
+              { label: 'Pricing', query: 'What are your prices?' },
+              { label: 'About Us', query: 'Tell me about HRandME' },
+            ])
+          } else {
+            setPhoneAttempts(prev => prev + 1)
+            if (phoneAttempts >= 1) {
+              responseText = `I didn't catch a valid 10-digit phone number. Please provide your phone number in any format (e.g., 9055912651 or 905-591-2651). Or type "skip" if you'd prefer not to share.`
+            } else {
+              responseText = `I didn't catch a valid 10-digit phone number. Please provide your phone number in any format (e.g., 9055912651 or 905-591-2651)`
+            }
+          }
         }
       }
       // Normal conversation after onboarding
