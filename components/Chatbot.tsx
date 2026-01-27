@@ -232,7 +232,7 @@ export default function Chatbot() {
       return [
         { label: 'AI Features', query: 'How does AI help?' },
         { label: 'Integrations', query: 'What integrations do you have?' },
-        { label: 'Pricing', query: 'What are your prices?' },
+        { label: 'Solutions', query: 'Tell me about your solutions' },
         { label: 'Get Demo', query: 'How do I get a demo?' },
       ]
     }
@@ -242,7 +242,7 @@ export default function Chatbot() {
       return [
         { label: 'Core HR', query: 'Tell me about Core HR' },
         { label: 'Small Teams', query: 'Is this for small teams?' },
-        { label: 'Pricing', query: 'What are your prices?' },
+        { label: 'Solutions', query: 'Tell me about your solutions' },
         { label: 'Get Demo', query: 'How do I get a demo?' },
       ]
     }
@@ -271,7 +271,7 @@ export default function Chatbot() {
     if (lowerQuery.includes('integrat') || lowerQuery.includes('payroll') || lowerQuery.includes('adp')) {
       return [
         { label: 'Core HR', query: 'Tell me about Core HR' },
-        { label: 'Pricing', query: 'What are your prices?' },
+        { label: 'Solutions', query: 'Tell me about your solutions' },
         { label: 'Get Demo', query: 'How do I get a demo?' },
         { label: 'Support', query: 'What support do you offer?' },
       ]
@@ -282,7 +282,7 @@ export default function Chatbot() {
       return [
         { label: 'Core HR', query: 'Tell me about Core HR' },
         { label: 'AI Features', query: 'How does AI help?' },
-        { label: 'Pricing', query: 'What are your prices?' },
+        { label: 'Solutions', query: 'Tell me about your solutions' },
         { label: 'Get Demo', query: 'How do I get a demo?' },
       ]
     }
@@ -292,7 +292,7 @@ export default function Chatbot() {
       return [
         { label: 'Features', query: 'What features do you have?' },
         { label: 'AI Features', query: 'How does AI help?' },
-        { label: 'Pricing', query: 'What are your prices?' },
+        { label: 'Solutions', query: 'Tell me about your solutions' },
         { label: 'Get Demo', query: 'How do I get a demo?' },
       ]
     }
@@ -301,7 +301,7 @@ export default function Chatbot() {
     if (lowerQuery.includes('demo') || lowerQuery.includes('support') || lowerQuery.includes('help')) {
       return [
         { label: 'Core HR', query: 'Tell me about Core HR' },
-        { label: 'Pricing', query: 'What are your prices?' },
+        { label: 'Solutions', query: 'Tell me about your solutions' },
         { label: 'About Us', query: 'Tell me about HRandME' },
         { label: 'Features', query: 'What features do you have?' },
       ]
@@ -354,7 +354,7 @@ export default function Chatbot() {
             { label: 'Performance', query: 'Tell me about Performance Management' },
             { label: 'Recruitment', query: 'Tell me about Recruitment' },
             { label: 'Compensation', query: 'Tell me about Compensation' },
-            { label: 'Pricing', query: 'What are your prices?' },
+            { label: 'Solutions', query: 'Tell me about your solutions' },
             { label: 'About Us', query: 'Tell me about HRandME' },
           ])
         }
@@ -373,7 +373,7 @@ export default function Chatbot() {
             { label: 'Performance', query: 'Tell me about Performance Management' },
             { label: 'Recruitment', query: 'Tell me about Recruitment' },
             { label: 'Compensation', query: 'Tell me about Compensation' },
-            { label: 'Pricing', query: 'What are your prices?' },
+            { label: 'Solutions', query: 'Tell me about your solutions' },
             { label: 'About Us', query: 'Tell me about HRandME' },
           ])
         }
@@ -405,7 +405,7 @@ export default function Chatbot() {
             { label: 'Performance', query: 'Tell me about Performance Management' },
             { label: 'Recruitment', query: 'Tell me about Recruitment' },
             { label: 'Compensation', query: 'Tell me about Compensation' },
-            { label: 'Pricing', query: 'What are your prices?' },
+            { label: 'Solutions', query: 'Tell me about your solutions' },
             { label: 'About Us', query: 'Tell me about HRandME' },
           ])
         } else {
@@ -441,7 +441,7 @@ export default function Chatbot() {
             { label: 'Performance', query: 'Tell me about Performance Management' },
             { label: 'Recruitment', query: 'Tell me about Recruitment' },
             { label: 'Compensation', query: 'Tell me about Compensation' },
-            { label: 'Pricing', query: 'What are your prices?' },
+            { label: 'Solutions', query: 'Tell me about your solutions' },
             { label: 'About Us', query: 'Tell me about HRandME' },
           ])
         } else {
@@ -466,7 +466,7 @@ export default function Chatbot() {
               { label: 'Performance', query: 'Tell me about Performance Management' },
               { label: 'Recruitment', query: 'Tell me about Recruitment' },
               { label: 'Compensation', query: 'Tell me about Compensation' },
-              { label: 'Pricing', query: 'What are your prices?' },
+              { label: 'Solutions', query: 'Tell me about your solutions' },
               { label: 'About Us', query: 'Tell me about HRandME' },
             ])
           } else {
