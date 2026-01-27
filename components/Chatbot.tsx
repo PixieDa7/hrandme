@@ -516,7 +516,7 @@ export default function Chatbot() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-6 right-6 md:right-6 left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 z-50 w-14 h-14 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center justify-center group"
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all flex items-center justify-center group"
           >
             <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
           </motion.button>
@@ -530,7 +530,7 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-6 right-6 md:right-6 left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 z-50 w-[calc(100vw-3rem)] md:w-96 max-w-md h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-neutral-200"
+            className="fixed bottom-4 left-4 right-4 md:bottom-6 md:right-6 md:left-auto z-50 w-auto md:w-96 max-w-md h-[600px] max-h-[calc(100vh-2rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-neutral-200"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-primary-600 to-accent-600 text-white p-4 flex items-center justify-between">
