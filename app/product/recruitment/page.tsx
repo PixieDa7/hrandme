@@ -163,7 +163,7 @@ export default function RecruitmentPage() {
                 href="/solutions"
                 className="px-8 py-4 bg-white text-primary-600 border-2 border-primary-600 rounded-lg hover:bg-primary-50 transition-all font-semibold text-lg"
               >
-                View Pricing
+                View Solutions
               </Link>
             </div>
           </div>
