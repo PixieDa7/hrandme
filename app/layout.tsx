@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'HRandME - HR Expertise Without Unnecessary Complexity',
-    description: 'AI-guided HRIS for small HR teams with enterprise-grade capability—perfect for 1-2 person teams',
+    description: 'AI-guided HCM for small HR teams with enterprise-grade capability—perfect for 1-2 person teams',
     url: 'https://hrandme.com',
     siteName: 'HRandME',
     locale: 'en_US',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'HRandME - HR Expertise Without Unnecessary Complexity',
-    description: 'AI-guided HRIS for small HR teams with enterprise-grade capability—perfect for 1-2 person teams',
+    description: 'AI-guided HCM for small HR teams with enterprise-grade capability—perfect for 1-2 person teams',
     images: ['/logolarge.png'],
   },
   robots: {
