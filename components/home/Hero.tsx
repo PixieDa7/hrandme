@@ -62,7 +62,7 @@ export default function Hero() {
               transition={{ delay: 0.2, duration: 0.5 }}
             >
               <Sparkles className="w-4 h-4" />
-              <span className="text-sm font-semibold">AI-Guided HRIS Platform</span>
+              <span className="text-sm font-semibold">AI-Guided HCM Platform</span>
             </motion.div>
 
             <motion.h1
@@ -81,7 +81,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
-              HRandME is an AI-guided HRIS for <strong>small</strong> HR teams—delivering enterprise-grade capability with clarity, control, and confidence.
+              HRandME is an AI-guided HCM for <strong>small</strong> HR teams—delivering enterprise-grade capability with clarity, control, and confidence.
             </motion.p>
 
             <motion.div
@@ -140,7 +140,7 @@ export default function Hero() {
             transition={{ delay: 0.5, duration: 1 }}
           >
             <div className="relative">
-              {/* Main dashboard mockup - HRIS Analytics Overview */}
+              {/* Main dashboard mockup - HCM Analytics Overview */}
               <motion.div
                 className="bg-white rounded-2xl shadow-2xl p-8 border border-neutral-200"
                 whileHover={{ scale: 1.02 }}
@@ -154,7 +154,7 @@ export default function Hero() {
                         <Users className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <div className="font-semibold text-neutral-900">HRIS Analytics Overview</div>
+                        <div className="font-semibold text-neutral-900">HCM Analytics Overview</div>
                         <div className="text-sm text-neutral-500">Organization-wide workforce & payroll insights</div>
                       </div>
                     </div>

@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                 <h2 className="text-3xl font-bold text-neutral-900 mb-6">2. About HRandME</h2>
                 <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-xl p-8 mb-6 border border-teal-200">
                   <p className="text-neutral-700 leading-relaxed mb-4">
-                    HRandME Inc. is a Canadian company headquartered in Canada. We provide a cloud-based human resources information system (<strong>HRIS</strong>) designed to help organizations manage employee records, performance, compensation, time and attendance, analytics, and workforce operations globally (the <strong>"Services"</strong>).
+                    HRandME Inc. is a Canadian company headquartered in Canada. We provide a cloud-based human capital management system (<strong>HCM</strong>) designed to help organizations manage employee records, performance, compensation, time and attendance, analytics, and workforce operations globally (the <strong>"Services"</strong>).
                   </p>
                   <p className="text-neutral-700 leading-relaxed">
                     Our platform is designed as a system of record for HR teams, integrates with payroll, benefits, and enterprise tools, and incorporates AI-guided features to support—but not replace—human decision-making.

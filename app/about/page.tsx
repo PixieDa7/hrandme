@@ -136,7 +136,7 @@ export default function AboutPage() {
               <div className="hidden md:block">
                 <h2 className="text-3xl font-bold text-neutral-900 mb-6">Our Story</h2>
                 <p className="text-neutral-600 mb-4 leading-relaxed">
-                  HRandME was born from a simple observation: most HRIS platforms are built by engineers for engineers, not by HR professionals for HR professionals. And none were truly built with Canadian businesses in mind.
+                  HRandME was born from a simple observation: most HCM platforms are built by engineers for engineers, not by HR professionals for HR professionals. And none were truly built with Canadian businesses in mind.
                 </p>
                 <p className="text-neutral-600 mb-4 leading-relaxed">
                   After years of working with bloated, overly complex systems that required constant IT support and didn't understand Canadian labour laws, our founding team decided to build something different—a platform that combines enterprise-grade capability with genuine usability, designed specifically for the Canadian market.

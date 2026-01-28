@@ -32,7 +32,7 @@ const pillars = [
   {
     icon: HeadphonesIcon,
     title: '24/7 Human Support',
-    description: 'Always-on access to HRIS experts when it matters most.',
+    description: 'Always-on access to HCM experts when it matters most.',
     gradient: 'from-indigo-500 to-purple-500',
     bgGradient: 'from-indigo-50 to-purple-50',
   },

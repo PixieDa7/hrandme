@@ -242,7 +242,7 @@ export default function SolutionsPage() {
                   What kind of support do you offer?
                 </h3>
                 <p className="text-neutral-600">
-                  All plans include access to our HRIS expert support team. Professional and Enterprise plans receive priority and 24/7 support respectively.
+                  All plans include access to our HCM expert support team. Professional and Enterprise plans receive priority and 24/7 support respectively.
                 </p>
               </div>
             </div>

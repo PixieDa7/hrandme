@@ -18,7 +18,7 @@ const knowledgeBase = {
   },
   features: {
     keywords: ['feature', 'what does', 'capabilities', 'can it', 'does it have', 'functionality'],
-    response: "HRandME is an AI-guided HRIS platform with comprehensive features including: Employee Records Management, Leave & PTO Management, Time & Attendance, Payroll Integration, AI Intelligence & Insights, Analytics & Reporting, Performance Management, Recruitment, Compensation Management, and Mobile App access. Our AI guides you through every workflow and provides instant support."
+    response: "HRandME is an AI-guided HCM platform with comprehensive features including: Employee Records Management, Leave & PTO Management, Time & Attendance, Payroll Integration, AI Intelligence & Insights, Analytics & Reporting, Performance Management, Recruitment, Compensation Management, and Mobile App access. Our AI guides you through every workflow and provides instant support."
   },
   ai: {
     keywords: ['ai', 'artificial intelligence', 'smart', 'intelligent', 'automation', 'guide'],
@@ -42,7 +42,7 @@ const knowledgeBase = {
   },
   support: {
     keywords: ['support', 'help', 'assistance', 'customer service', '24/7'],
-    response: "HRandME provides 24/7 human support with always-on access to HRIS experts when it matters most. Our team is here to help you succeed. <a href='https://www.hrandme.com/contact' target='_blank' rel='noopener noreferrer' class='text-primary-600 hover:text-primary-700 underline font-semibold'>Click here</a> to contact us."
+    response: "HRandME provides 24/7 human support with always-on access to HCM experts when it matters most. Our team is here to help you succeed. <a href='https://www.hrandme.com/contact' target='_blank' rel='noopener noreferrer' class='text-primary-600 hover:text-primary-700 underline font-semibold'>Click here</a> to contact us."
   },
   products: {
     keywords: ['product', 'module', 'core hr', 'recruitment', 'performance', 'compensation', 'tell me about core hr', 'tell me about performance', 'tell me about recruitment', 'tell me about compensation'],
@@ -50,7 +50,7 @@ const knowledgeBase = {
   },
   aboutUs: {
     keywords: ['about', 'who are you', 'tell me about hrandme', 'company', 'who built'],
-    response: "HRandME is proudly Canadian 🍁 and built by HR professionals for small HR teams. We're an AI-guided HRIS platform designed specifically for teams of 1-4 people managing small to medium-sized businesses. Our mission is to deliver enterprise-grade HR capability with clarity, control, and confidence—without unnecessary complexity."
+    response: "HRandME is proudly Canadian 🍁 and built by HR professionals for small HR teams. We're an AI-guided HCM platform designed specifically for teams of 1-4 people managing small to medium-sized businesses. Our mission is to deliver enterprise-grade HR capability with clarity, control, and confidence—without unnecessary complexity."
   }
 }
 
@@ -60,7 +60,7 @@ function findBestResponse(userMessage: string, userName?: string): string {
   
   // Check for greetings
   if (knowledgeBase.greetings.some(greeting => lowerMessage.includes(greeting))) {
-    return `${greeting} I'm the HRandME AI assistant. I'm here to help answer questions about our AI-guided HRIS platform. What would you like to know?`
+    return `${greeting} I'm the HRandME AI assistant. I'm here to help answer questions about our AI-guided HCM platform. What would you like to know?`
   }
   
   // Check each knowledge category
