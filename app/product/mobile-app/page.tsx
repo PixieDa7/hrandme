@@ -202,43 +202,6 @@ export default function MobileAppPage() {
         </div>
       </section>
 
-      {/* App Download Section */}
-      <section className="py-16 lg:py-20 bg-gradient-to-br from-slate-50 to-white">
-        <div className="container-custom">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-primary-600 to-accent-600 rounded-3xl p-12 lg:p-16 text-white">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                    Download the App Today
-                  </h2>
-                  <p className="text-xl mb-8 opacity-90">
-                    Available for iOS and Android. Get started in minutes with our easy setup process.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="px-6 py-3 bg-white text-neutral-900 rounded-lg font-semibold hover:bg-neutral-100 transition-all flex items-center justify-center space-x-2">
-                      <Download className="w-5 h-5" />
-                      <span>App Store</span>
-                    </button>
-                    <button className="px-6 py-3 bg-white text-neutral-900 rounded-lg font-semibold hover:bg-neutral-100 transition-all flex items-center justify-center space-x-2">
-                      <Download className="w-5 h-5" />
-                      <span>Google Play</span>
-                    </button>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center">
-                  <div className="relative">
-                    <div className="w-64 h-64 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                      <Smartphone className="w-32 h-32 text-white" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 lg:py-20 bg-gradient-to-br from-neutral-800 to-neutral-900">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center text-white">
