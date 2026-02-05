@@ -1,0 +1,11 @@
+# robots.txt for HRandME
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Disallow only the not-found page
+Disallow: /login/not-found
+
+# Sitemap location
+Sitemap: https://hrandme.com/sitemap.xml
