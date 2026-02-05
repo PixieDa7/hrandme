@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Home Page - Highest Priority -->
+  <url>
+    <loc>https://hrandme.com/</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core Product Pages - High Priority -->
+  <url>
+    <loc>https://hrandme.com/product/core-hr</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/performance</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/recruitment</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Integrations Page - High Priority -->
+  <url>
+    <loc>https://hrandme.com/integrations</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Solutions Page - High Priority -->
+  <url>
+    <loc>https://hrandme.com/solutions</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Other Product Pages - Medium-High Priority -->
+  <url>
+    <loc>https://hrandme.com/product/compensation</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/time-attendance</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/leave-management</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/employee-records</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/payroll</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/analytics</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/ai-intelligence</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/product/mobile-app</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Important Pages - Medium Priority -->
+  <url>
+    <loc>https://hrandme.com/about</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/contact</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/security</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/support</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal Pages - Lower Priority -->
+  <url>
+    <loc>https://hrandme.com/privacy</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://hrandme.com/terms</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Login Page - Low Priority (excluding /login/not-found as requested) -->
+  <url>
+    <loc>https://hrandme.com/login</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>
