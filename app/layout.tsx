@@ -52,6 +52,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCG1YTNVZT"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-WCG1YTNVZT');
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} font-sans antialiased bg-white text-neutral-900`}>
         <Header />
         <main className="min-h-screen">
