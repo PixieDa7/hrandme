@@ -4,7 +4,6 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Chatbot from '@/components/Chatbot'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -54,7 +53,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased bg-white text-neutral-900`}>
-        <GoogleAnalytics />
         <Header />
         <main className="min-h-screen">
           {children}
