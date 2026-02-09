@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { UserPlus, Search, CheckCircle, ArrowRight, Briefcase } from 'lucide-react'
+import { UserPlus, Search, CheckCircle, ArrowRight, Briefcase, Users, Target, FileText, Calendar, Shield, Sparkles } from 'lucide-react'
 
 export default function RecruitmentSection() {
   return (
