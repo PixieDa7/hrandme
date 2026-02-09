@@ -20,7 +20,7 @@ export default function RecruitmentSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/pexels-divinetechygirl-1181406.jpg"
+                src="/images/pexels-darlene-alderson-7971170.jpg"
                 alt="Recruitment and hiring process"
                 width={600}
                 height={400}
