@@ -91,7 +91,7 @@ export default function PlatformOverview() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    className="group relative flex items-center space-x-3 pl-3 pr-4 py-4 bg-white rounded-xl border-2 border-neutral-200 hover:border-transparent hover:shadow-xl transition-all cursor-pointer overflow-hidden"
+                    className="group relative flex items-center space-x-3 pl-2 pr-4 py-4 bg-white rounded-xl border-2 border-neutral-200 hover:border-transparent hover:shadow-xl transition-all cursor-pointer overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 transition-opacity" style={{ backgroundImage: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }} />
                     <motion.div 
