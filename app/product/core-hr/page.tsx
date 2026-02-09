@@ -235,9 +235,26 @@ export default function CoreHRPage() {
       <section className="py-16 lg:py-20">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
-              Everything You Need in Core HR
-            </h2>
+            <motion.div
+              className="inline-flex items-center gap-3 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/favicon.svg"
+                  alt="HRandME"
+                  width={48}
+                  height={48}
+                  className="w-full h-full"
+                />
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900">
+                Everything You Need in Core HR
+              </h2>
+            </motion.div>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
               Powerful features designed to streamline your HR operations and improve employee experience.
             </p>

@@ -1,3 +1,7 @@
+'use client'
+
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { Users, Sparkles, Link2, Shield, HeadphonesIcon, Clock } from 'lucide-react'
 
 const pillars = [
@@ -49,10 +53,27 @@ export default function ValuePillars() {
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-br from-neutral-50 to-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
-            Why Choose <span className="gradient-text">HRandME</span>?
-          </h2>
+        <div className="text-center mb-16 relative">
+          <motion.div
+            className="inline-flex items-center gap-3 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src="/favicon.svg"
+                alt="HRandME"
+                width={48}
+                height={48}
+                className="w-full h-full"
+              />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900">
+              Why Choose <span className="gradient-text">HRandME</span>?
+            </h2>
+          </motion.div>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
             Stop settling for HR software that's either too complex or too basic. HRandME delivers enterprise-grade power with the intuitive experience <strong>small</strong> HR teams deserve. Perfect for teams of just 1-2 people. Built by HR professionals who understand your challenges, designed for Canadian businesses who demand better.
           </p>
