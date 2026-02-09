@@ -1,6 +1,6 @@
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="32" height="32" rx="6" fill="#2563EB"/>
+  <rect width="32" height="32" rx="6" fill="#210949"/>
   
   <!-- Simple icon - Three people (centered) -->
   <g transform="translate(16, 11)">

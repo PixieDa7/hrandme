@@ -4,7 +4,7 @@ interface LogoProps {
 }
 
 export default function Logo({ className = '', variant = 'default' }: LogoProps) {
-  const accentColor = '#2563EB' // Professional blue
+  const accentColor = variant === 'white' ? '#FFFFFF' : '#5244E5' // Purple for navbar, white for footer
   const gradientId = `logo-gradient-${variant}`
   
   return (

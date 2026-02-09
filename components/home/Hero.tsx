@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, CheckCircle, Sparkles, Users, TrendingUp, DollarSign, Zap } from 'lucide-react'
 import { motion } from 'framer-motion'
 
@@ -150,8 +151,14 @@ export default function Hero() {
                   {/* Header */}
                   <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
-                        <Users className="w-6 h-6 text-white" />
+                      <div className="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
+                        <Image
+                          src="/favicon.svg"
+                          alt="HRandME"
+                          width={40}
+                          height={40}
+                          className="w-full h-full"
+                        />
                       </div>
                       <div>
                         <div className="font-semibold text-neutral-900">HCM Analytics Overview</div>
