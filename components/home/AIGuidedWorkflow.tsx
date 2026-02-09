@@ -79,7 +79,10 @@ export default function AIGuidedWorkflow() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">Instant Employee Support</h3>
-                  <p className="text-neutral-600">Employees get 24/7 AI assistance for HR questions, policy clarifications, and workflow guidance.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Employees get 24/7 AI assistance for HR questions, policy clarifications, and workflow guidance.</span>
+                    <span className="md:hidden">24/7 AI assistance for HR questions and guidance.</span>
+                  </p>
                 </div>
               </div>
 
@@ -89,7 +92,10 @@ export default function AIGuidedWorkflow() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">Smart Workflow Automation</h3>
-                  <p className="text-neutral-600">AI predicts what you need next, automates repetitive tasks, and keeps your team on track.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">AI predicts what you need next, automates repetitive tasks, and keeps your team on track.</span>
+                    <span className="md:hidden">Automates tasks and keeps your team on track.</span>
+                  </p>
                 </div>
               </div>
             </div>

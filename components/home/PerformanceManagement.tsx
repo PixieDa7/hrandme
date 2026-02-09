@@ -33,7 +33,8 @@ export default function PerformanceManagement() {
             </h2>
             
             <p className="text-xl text-neutral-600 mb-8">
-              Move beyond annual reviews. Our performance management system helps you build a culture of continuous feedback, goal alignment, and employee development.
+              <span className="hidden md:inline">Move beyond annual reviews. Our performance management system helps you build a culture of continuous feedback, goal alignment, and employee development.</span>
+              <span className="md:hidden">Build a culture of continuous feedback and employee development.</span>
             </p>
 
             <div className="space-y-4 mb-8">
@@ -43,7 +44,10 @@ export default function PerformanceManagement() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">Goal Tracking & OKRs</h3>
-                  <p className="text-neutral-600">Set, track, and measure individual and team goals with real-time progress updates.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Set, track, and measure individual and team goals with real-time progress updates.</span>
+                    <span className="md:hidden">Track goals with real-time updates.</span>
+                  </p>
                 </div>
               </div>
 
@@ -53,7 +57,10 @@ export default function PerformanceManagement() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">360° Feedback</h3>
-                  <p className="text-neutral-600">Gather comprehensive feedback from peers, managers, and direct reports for holistic reviews.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Gather comprehensive feedback from peers, managers, and direct reports for holistic reviews.</span>
+                    <span className="md:hidden">Comprehensive feedback for holistic reviews.</span>
+                  </p>
                 </div>
               </div>
 
@@ -63,7 +70,10 @@ export default function PerformanceManagement() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">1-on-1 Meeting Tools</h3>
-                  <p className="text-neutral-600">Structured templates and AI-suggested talking points for productive manager-employee conversations.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Structured templates and AI-suggested talking points for productive manager-employee conversations.</span>
+                    <span className="md:hidden">Templates for productive conversations.</span>
+                  </p>
                 </div>
               </div>
             </div>
