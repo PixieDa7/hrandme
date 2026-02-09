@@ -55,13 +55,13 @@ export default function ValuePillars() {
       <div className="container-custom">
         <div className="text-center mb-16 relative">
           <motion.div
-            className="inline-flex items-center gap-3 mb-6"
+            className="inline-flex items-center gap-2 md:gap-3 mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+            <div className="w-8 h-8 md:w-12 md:h-12 rounded-xl overflow-hidden shadow-lg">
               <Image
                 src="/favicon.svg"
                 alt="HRandME"
@@ -70,7 +70,7 @@ export default function ValuePillars() {
                 className="w-full h-full"
               />
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-900">
               Why Choose <span className="gradient-text">HRandME</span>?
             </h2>
           </motion.div>

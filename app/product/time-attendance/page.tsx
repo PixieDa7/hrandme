@@ -183,7 +183,7 @@ export default function TimeAttendancePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+              <div className="hidden md:block w-12 h-12 rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="/favicon.svg"
                   alt="HRandME"
@@ -192,7 +192,7 @@ export default function TimeAttendancePage() {
                   className="w-full h-full"
                 />
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900">
                 Complete Time & Attendance Solution
               </h2>
             </motion.div>
@@ -252,7 +252,7 @@ export default function TimeAttendancePage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-6">
                 Accurate Time, Every Time
               </h2>
               <p className="text-xl text-neutral-600 mb-6">

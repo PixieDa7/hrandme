@@ -16,7 +16,7 @@ export default function AIGuidedWorkflow() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="hidden lg:block relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image

@@ -60,7 +60,7 @@ export default function PlatformOverview() {
           </div>
           
           <motion.div 
-            className="glass-effect rounded-2xl p-8 shadow-2xl"
+            className="hidden lg:block glass-effect rounded-2xl p-8 shadow-2xl"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}

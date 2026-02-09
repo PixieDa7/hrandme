@@ -91,7 +91,7 @@ export default function PerformanceManagement() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative max-w-md mx-auto"
+            className="hidden lg:block relative max-w-md mx-auto"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image

@@ -180,7 +180,7 @@ export default function MobileAppPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="w-12 h-12 rounded-xl overflow-hidden shadow-lg">
+              <div className="hidden md:block w-12 h-12 rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="/favicon.svg"
                   alt="HRandME"
@@ -189,7 +189,7 @@ export default function MobileAppPage() {
                   className="w-full h-full"
                 />
               </div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-neutral-900">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900">
                 Everything Your Team Needs On Mobile
               </h2>
             </motion.div>
