@@ -64,7 +64,7 @@ export default function RecruitmentSection() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             >
               <div className="text-center">
-                <p className="text-sm text-neutral-600">Automate >50% in hiring</p>
+                <p className="text-sm text-neutral-600">Automate &gt;50% in hiring</p>
               </div>
             </motion.div>
           </motion.div>
