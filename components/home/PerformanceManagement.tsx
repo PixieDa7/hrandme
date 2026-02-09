@@ -7,7 +7,7 @@ import { Target, TrendingUp, Award, ArrowRight, Users } from 'lucide-react'
 
 export default function PerformanceManagement() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="hidden lg:block py-16 lg:py-24 bg-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Side - Left */}

@@ -1,16 +1,15 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { UserPlus, Search, CheckCircle, ArrowRight, Briefcase, Users, Target, FileText, Calendar, Shield, Sparkles } from 'lucide-react'
+import { UserPlus, Search, CheckCircle, ArrowRight, Briefcase, Users, Target } from 'lucide-react'
 
 export default function RecruitmentSection() {
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <section className="hidden lg:block py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-cyan-50">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image Side - Left */}
+          {/* Workflow Diagram - Left */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -18,37 +17,46 @@ export default function RecruitmentSection() {
             transition={{ duration: 0.6 }}
             className="relative order-2 lg:order-1 max-w-lg mx-auto"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/pexels-darlene-alderson-7971170.jpg"
-                alt="Recruitment and hiring process"
-                width={600}
-                height={400}
-                className="w-full h-auto object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-900/8 to-transparent"></div>
+            <div className="relative rounded-2xl p-8 bg-gradient-to-br from-blue-100 to-cyan-100 shadow-2xl min-h-[400px] flex items-center justify-center">
+              {/* Hiring Workflow Diagram */}
+              <div className="w-full space-y-3">
+                {[
+                  { icon: Briefcase, label: 'Job Posting', sublabel: 'LinkedIn & Indeed', delay: 0 },
+                  { icon: Search, label: 'AI Screening', sublabel: 'Applicant Review', delay: 0.2 },
+                  { icon: Users, label: 'Interview Scheduling', sublabel: 'Automated Booking', delay: 0.4 },
+                  { icon: CheckCircle, label: 'Reference Checks', sublabel: 'Verification', delay: 0.6 },
+                  { icon: Target, label: 'Offer Letter', sublabel: 'Digital Signing', delay: 0.8 },
+                  { icon: UserPlus, label: 'Onboarding', sublabel: 'Day 1 Ready', delay: 1.0 }
+                ].map((step, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center gap-4 bg-white rounded-xl p-4 shadow-md"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: step.delay }}
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <step.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-neutral-900">{step.label}</p>
+                      <p className="text-sm text-neutral-600">{step.sublabel}</p>
+                    </div>
+                    <motion.div
+                      className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center"
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: step.delay + 0.3 }}
+                    >
+                      <ArrowRight className="w-4 h-4 text-white" />
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-            {/* Floating favicon badge */}
-            <motion.div 
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                <Image
-                  src="/favicon.svg"
-                  alt="HRandME"
-                  width={40}
-                  height={40}
-                  className="w-full h-full"
-                />
-              </div>
-              <div>
-                <p className="font-bold text-neutral-900 text-sm">HRandME</p>
-                <p className="text-xs text-neutral-600">Recruitment</p>
-              </div>
-            </motion.div>
+            
             {/* Stats Badge */}
             <motion.div 
               className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-6"
@@ -57,7 +65,7 @@ export default function RecruitmentSection() {
             >
               <div className="text-center">
                 <p className="text-3xl font-bold text-blue-600">50%</p>
-                <p className="text-sm text-neutral-600">Faster Hiring</p>
+                <p className="text-sm text-neutral-600">Streamline your hiring process.</p>
               </div>
             </motion.div>
           </motion.div>
@@ -86,7 +94,8 @@ export default function RecruitmentSection() {
             </h2>
             
             <p className="text-xl text-neutral-600 mb-8">
-              Streamline your entire hiring process from job posting to offer letter. Our recruitment tools help small HR teams compete for top talent without the enterprise overhead.
+              <span className="hidden md:inline">Streamline your entire hiring process from job posting to offer letter. Our recruitment tools help small HR teams compete for top talent without the enterprise overhead.</span>
+              <span className="md:hidden">Streamline hiring from job posting to offer letter.</span>
             </p>
 
             <div className="space-y-4 mb-8">
@@ -96,7 +105,10 @@ export default function RecruitmentSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">AI-Powered Candidate Matching</h3>
-                  <p className="text-neutral-600">Automatically rank and filter candidates based on job requirements and cultural fit.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Automatically rank and filter candidates based on job requirements and cultural fit.</span>
+                    <span className="md:hidden">Rank candidates by fit and requirements.</span>
+                  </p>
                 </div>
               </div>
 
@@ -106,7 +118,10 @@ export default function RecruitmentSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">Collaborative Hiring</h3>
-                  <p className="text-neutral-600">Share candidate profiles, collect feedback, and make hiring decisions as a team.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Share candidate profiles, collect feedback, and make hiring decisions as a team.</span>
+                    <span className="md:hidden">Team-based hiring decisions.</span>
+                  </p>
                 </div>
               </div>
 
@@ -116,7 +131,10 @@ export default function RecruitmentSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-neutral-900 mb-1">Seamless Onboarding</h3>
-                  <p className="text-neutral-600">Convert accepted candidates to employees with automated onboarding workflows.</p>
+                  <p className="text-neutral-600">
+                    <span className="hidden md:inline">Convert accepted candidates to employees with automated onboarding workflows.</span>
+                    <span className="md:hidden">Automated onboarding workflows.</span>
+                  </p>
                 </div>
               </div>
             </div>
