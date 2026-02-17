@@ -8,6 +8,7 @@ import Chatbot from '@/components/Chatbot'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hrandme.com'),
   title: 'HRandME - HR Expertise Without Unnecessary Complexity',
   description: 'HRandME is an AI-guided HCM for small HR teams—delivering enterprise-grade capability with clarity, control, and confidence. Built for teams of 1-2 people. Built by HR. Guided by AI. Supported 24/7 by real experts.',
   keywords: 'HCM, HR software, human resources, payroll integration, performance management, AI-guided HR, employee management, HR analytics, workforce management',
@@ -42,6 +43,16 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://hrandme.com',
   },
 }
 
