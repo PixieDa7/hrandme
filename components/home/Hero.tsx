@@ -6,9 +6,9 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-slate-50 to-indigo-50/40 pt-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-slate-50 to-indigo-50/40 pt-20 pb-16">
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-15"
           animate={{
@@ -34,7 +34,7 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-12"
+          className="absolute -bottom-8 left-1/2 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-15"
           animate={{
             x: [0, 50, 0],
             y: [0, -50, 0],
