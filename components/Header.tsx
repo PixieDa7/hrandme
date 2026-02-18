@@ -13,10 +13,15 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      const isDesktop = window.innerWidth >= 1024
+      setIsScrolled(isDesktop && window.scrollY > 10)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
   }, [])
 
   const productLinks = [
@@ -40,12 +45,12 @@ export default function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'lg:[background-color:#210949]' : ''}`}
     >
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
-            <Logo className="h-12 w-auto" />
+            <Logo className="h-12 w-auto" variant={isScrolled ? 'white' : 'default'} />
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -55,7 +60,7 @@ export default function Header() {
               onMouseLeave={() => setIsProductOpen(false)}
             >
               <button
-                className="flex items-center space-x-1 text-neutral-700 hover:text-primary-600 transition-colors font-medium py-2"
+                className={`flex items-center space-x-1 transition-colors font-medium py-2 ${isScrolled ? 'text-white hover:text-teal-300' : 'text-neutral-700 hover:text-primary-600'}`}
                 onClick={() => setIsProductOpen(!isProductOpen)}
               >
                 <span>Product</span>
@@ -141,28 +146,28 @@ export default function Header() {
             </div>
             <Link
               href="/integrations"
-              className="text-neutral-700 hover:text-primary-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${isScrolled ? 'text-white hover:text-teal-300' : 'text-neutral-700 hover:text-primary-600'}`}
               onClick={() => setIsProductOpen(false)}
             >
               Integrations
             </Link>
             <Link
               href="/solutions"
-              className="text-neutral-700 hover:text-primary-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${isScrolled ? 'text-white hover:text-teal-300' : 'text-neutral-700 hover:text-primary-600'}`}
               onClick={() => setIsProductOpen(false)}
             >
               Solutions
             </Link>
             <Link
               href="/about"
-              className="text-neutral-700 hover:text-primary-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${isScrolled ? 'text-white hover:text-teal-300' : 'text-neutral-700 hover:text-primary-600'}`}
               onClick={() => setIsProductOpen(false)}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="text-neutral-700 hover:text-primary-600 transition-colors font-medium"
+              className={`transition-colors font-medium ${isScrolled ? 'text-white hover:text-teal-300' : 'text-neutral-700 hover:text-primary-600'}`}
               onClick={() => setIsProductOpen(false)}
             >
               Contact
@@ -172,13 +177,13 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3">
             <Link
               href="/login"
-              className="px-4 py-2 text-neutral-700 hover:text-primary-600 font-semibold transition-colors text-sm"
+              className={`px-4 py-2 font-semibold transition-colors text-sm ${isScrolled ? 'text-white hover:text-teal-300' : 'text-neutral-700 hover:text-primary-600'}`}
             >
               Log In
             </Link>
             <Link
               href="/contact"
-              className="px-4 py-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors text-sm"
+              className={`px-4 py-2 font-semibold transition-colors text-sm ${isScrolled ? 'text-white hover:text-teal-300' : 'text-primary-600 hover:text-primary-700'}`}
             >
               Talk to an Expert
             </Link>
